@@ -36,7 +36,7 @@ public class MessageConsumerEJB implements MessageListener {
             if (message instanceof TextMessage) {
                 msg = (TextMessage) message;
                 System.out.println("MESSAGE BEAN: Message received: "+ msg.getText()+ " "+msg.getText().getBytes().length);
-                Thread.sleep(10000);
+                Thread.sleep(25000);
                 System.out.println("End read message "+msg.getJMSCorrelationID());
             } else {
                 System.out.println("Message of wrong type: "+ message.getClass().getName());
